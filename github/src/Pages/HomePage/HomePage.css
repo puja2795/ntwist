@@ -1,0 +1,26 @@
+.home {
+  display: flex;
+}
+.repos {
+  width: 25%;
+  border-right: 1px solid grey;
+  min-height: calc(100vh - 65px);
+  max-height: 100vh;
+}
+.container {
+  width: 90%;
+  border: 1px solid red;
+  display: flex;
+  padding: 15px;
+  gap: 20px;
+}
+
+.main-container {
+  border: 1px solid black;
+  width: 70%;
+}
+
+.changes {
+  border: 1px solid black;
+  width: 30%;
+}
