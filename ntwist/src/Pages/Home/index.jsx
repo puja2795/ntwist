@@ -2,6 +2,7 @@ import React from "react";
 import Feature from "../../Components/Features";
 import "./Home.css";
 import bgImage from "../../assets/home-image-bg.png";
+import homeImageIcon from "../../assets/home-image-icons.png";
 
 const FeatureData = [
   {
@@ -35,8 +36,17 @@ const FeatureData = [
 const HomePage = () => {
   return (
     <div className="home">
-      <div>
+      <div className="bgimgdiv">
         <img src={bgImage} alt="bgimage" className="bgimage" />
+      </div>
+      <div className="home-content">
+        <div className="home-title-div">
+          <p className="home-title">
+            Data-powdered solutions for Industiral Excellence
+          </p>
+          <button className="home-btn">Read More</button>
+        </div>
+        <img src={homeImageIcon} className="home-image" />
       </div>
       {FeatureData.map((feature) => {
         return (
