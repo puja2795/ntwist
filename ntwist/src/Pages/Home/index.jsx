@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import Feature from "../../Components/Features";
 import "./Home.css";
+import bgImage from "../../assets/home-image-bg.png";
 
 const FeatureData = [
   {
@@ -32,19 +33,11 @@ const FeatureData = [
 ];
 
 const HomePage = () => {
-  const [changeColor, setChangeColor] = useState(false);
-
-  const changeNavbarColor = () => {
-    if (window.scrollY >= 100) {
-      setChangeColor(true);
-    } else {
-      setChangeColor(false);
-    }
-  };
-  window.addEventListener("scroll", changeNavbarColor);
-
   return (
-    <div className={changeColor ? "home" : ""}>
+    <div className="home">
+      <div>
+        <img src={bgImage} alt="bgimage" className="bgimage" />
+      </div>
       {FeatureData.map((feature) => {
         return (
           <Feature
