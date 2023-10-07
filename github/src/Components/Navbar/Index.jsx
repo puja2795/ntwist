@@ -1,7 +1,7 @@
 import React from "react";
 import "./Navbar.css";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { BsGithub } from "react-icons/bs";
+import { BsChevronRight, BsDash, BsGithub } from "react-icons/bs";
 import { GrSearch } from "react-icons/gr";
 import { TbMathGreater } from "react-icons/tb";
 import { AiOutlinePlus } from "react-icons/ai";
@@ -9,7 +9,8 @@ import { IoMdArrowDropdown } from "react-icons/io";
 import { VscIssues } from "react-icons/vsc";
 import { BiGitPullRequest } from "react-icons/bi";
 import { AiOutlineInbox } from "react-icons/ai";
-import { RxAvatar } from "react-icons/rx";
+import { RxAvatar, RxHamburgerMenu } from "react-icons/rx";
+import { CiMenuBurger } from "react-icons/ci";
 
 const Navbar = () => {
   return (
@@ -17,7 +18,7 @@ const Navbar = () => {
       <div className="dashboard">
         <div className="dashboard-inner">
           <div className="hamburger">
-            <GiHamburgerMenu />
+            <CiMenuBurger strokeWidth={1} />
           </div>
           <div className="logo">
             <BsGithub />
@@ -33,7 +34,7 @@ const Navbar = () => {
           </div>
         </div>
       </div>
-      <div className="profile">
+      <div className="nav-profile">
         <div className="search">
           <div
             style={{
@@ -46,34 +47,14 @@ const Navbar = () => {
           >
             <GrSearch style={{ paddingLeft: "5px", fontSize: "20px" }} />
             <div className="type">
-              Type
-              <span
-                style={{ display: "flex", alignItems: "center", gap: "10px" }}
-              >
-                <div
-                  style={{
-                    border: "1px solid grey",
-                    borderRadius: "3px",
-                    padding: "0 5px",
-                  }}
-                >
-                  /
-                </div>
-                to search
-              </span>
+              <span>Type</span>
+              <span className="type-empty">/</span>
+              <span>to search</span>
             </div>
           </div>
-          <div
-            style={{
-              borderLeft: "1px solid black",
-              width: "10%",
-              height: "60%",
-              margin: "auto",
-              display: "flex",
-              paddingLeft: "5px",
-            }}
-          >
-            <TbMathGreater />_
+          <div className="code-icon">
+            <BsChevronRight strokeWidth={1} size={14} />
+            <BsDash className="code-dash" strokeWidth={0.5} />
           </div>
         </div>
         <div className="menu">
@@ -90,9 +71,7 @@ const Navbar = () => {
           <div className="menu-div">
             <AiOutlineInbox />
           </div>
-          <div className="menu-div">
-            <RxAvatar />
-          </div>
+          <RxAvatar size={35} strokeWidth={0} />
         </div>
       </div>
     </div>

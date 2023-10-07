@@ -1,0 +1,44 @@
+.history-wrap {
+  padding: 10px;
+}
+
+.history-thread {
+  border-left: 1px solid rgb(136, 146, 157);
+  padding-left: 20px;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.history-thread::before {
+  position: absolute;
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #000;
+  left: -4px;
+  top: 4px;
+}
+
+.history-thread:nth-child(1)::after {
+  position: absolute;
+  content: "";
+  width: 8px;
+  height: 8px;
+  background-color: #fff;
+  left: -4px;
+  top: -4px;
+}
+
+.his-time {
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.his-detail {
+  font-size: 14px;
+  overflow: hidden;
+  max-height: 40px;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+}

@@ -1,0 +1,12 @@
+.repocard {
+  display: flex;
+  margin-top: 10px;
+}
+
+.repo-subavatar {
+  display: flex;
+  gap: 6px;
+  height: 18px;
+  width: 18px;
+  font-size: 14px;
+}
